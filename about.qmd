@@ -1,0 +1,8 @@
+---
+title: "About"
+---
+
+This Quarto site documents the various steps in running this experiement with DASS questions.
+
+RQ: Does prompting an llm with persona characteristics related to mental health influence llm survey response behaviors as measured by DASS-21?
+

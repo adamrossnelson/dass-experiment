@@ -1,0 +1,34 @@
+---
+title: "Make Data"
+---
+
+This page generates the experimental data: simulated survey respondents are assigned personas (from `persona_dass21_final.json`) and answer the DASS-21 questionnaire (`dass21questions.json`) via `SurveyResponder.py`.
+
+```{python}
+from SurveyResponder import SurveyResponder
+
+import pandas as pd
+import numpy as np
+
+from IPython.display import display, Markdown
+
+# While building and testing we'll use just 2 responses
+num_responses = 2
+
+responder = SurveyResponder(
+    questions_path="dass21questions.json",
+    persona_path="persona_dass21_final.json",
+    model_name="olmo2:7b",
+    num_responses=num_responses,
+    temperature=2.0,
+    base_url="http://localhost:11434/api/generate"
+)
+
+df = responder.run_write(
+    "data_running_tests/initial-1006/results.csv",
+    validate=True,          # check response in ["valid_responses"]
+    on_invalid="recode",    # "none" | "retry" | "recode"
+    max_retries=2)          # only used when on_invalid="retry"
+
+display(Markdown(df.head().to_markdown()))
+```

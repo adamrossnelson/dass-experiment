@@ -1,0 +1,10 @@
+---
+title: "Explore Data"
+---
+
+This page explores the data generated in [Make Data](make_data.qmd):
+distributions of DASS-21 responses and scores by persona condition.
+
+```{python}
+# Exploration code goes here.
+```

@@ -1,0 +1,23 @@
+{
+  "supplementary_instructions": [
+    ["supplementary_instructions","(to be clear, we know you are an LLM. We want you to act as a survey respondent. We ask you to answer this question as if you were a real person...)"]
+  ],
+  "age": [
+    [25, "who is 25 years old"]
+  ],
+  "gender": [
+    ["woman", "who is a woman"],
+    ["man", "who is a man"],
+    ["nonbinary", "who is nonbinary"]
+  ],
+  "mental_health_status": [
+    ["no_elevated_symptoms", "who, over the past week, has experienced no elevated symptoms of depression, anxiety, or stress"],
+    ["depression_symptoms", "who, over the past week, has experienced elevated symptoms of depression"],
+    ["anxiety_symptoms", "who, over the past week, has experienced elevated symptoms of anxiety"],
+    ["stress_symptoms", "who, over the past week, has experienced elevated symptoms of stress"],
+    ["combined_symptoms", "who, over the past week, has experienced elevated symptoms of depression, anxiety, and stress"]
+  ],
+  "honesty": [
+    ["honest", "who answers survey questions honestly"]
+  ]
+}

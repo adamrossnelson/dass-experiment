@@ -1,0 +1,236 @@
+{
+  "questions_path": "questions.json",
+  "persona_path": "persona_dass21_final.json",
+  "model_name": "olmo2:7b",
+  "base_url": "http://localhost:11434/api/generate",
+  "num_responses": 2,
+  "temperature": 2.0,
+  "run_date": "2026-10-07 15:44:35.857738",
+  "num_questions": 16,
+  "questions_json": {
+    "scales": {
+      "likert5": {
+        "preface": "Respond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:",
+        "options": {
+          "1) strongly disagree": 1,
+          "2) disagree": 2,
+          "3) neutral": 3,
+          "4) agree": 4,
+          "5) strongly agree": 5
+        },
+        "valid_responses": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "strongly disagree",
+          "disagree",
+          "neutral",
+          "agree",
+          "strongly agree"
+        ]
+      },
+      "freq5": {
+        "preface": "Respond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:",
+        "options": {
+          "1) never": 1,
+          "2) rarely": 2,
+          "3) sometimes": 3,
+          "4) often": 4,
+          "5) always": 5
+        },
+        "valid_responses": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "never",
+          "rarely",
+          "sometimes",
+          "often",
+          "always"
+        ]
+      }
+    },
+    "questions": [
+      {
+        "id": "enjoy_student",
+        "text": "I enjoy being a student.",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "enjoy_learning",
+        "text": "I enjoy learning new things.",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "see_smart",
+        "text": "I see myself as smart.",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "studying_happy",
+        "text": "Studying makes me happy",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "describe_clever",
+        "text": "I describe myself as clever.",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "calm_pressure",
+        "text": "I stay calm under pressure",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "recover_setbacks",
+        "text": "I recover quickly from setbacks",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "rarely_overwhelmed",
+        "text": "I rarely feel overwhelmed.",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "handle_stress",
+        "text": "I handle stress well.",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "emotionally_balanced",
+        "text": "I feel emotionally balanced.",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "no_fear_speech",
+        "text": "I have no fear of giving a speech.",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "relaxed_speech",
+        "text": "I feel relaxed while giving a speech.",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "confident_speech",
+        "text": "I face the prospect of giving a speech with confidence.",
+        "scale": "likert5",
+        "reverse_coded": false
+      },
+      {
+        "id": "natural_leader",
+        "text": "I am a natural leader.",
+        "scale": "freq5",
+        "reverse_coded": false
+      },
+      {
+        "id": "forget_speech",
+        "text": "I forget facts I really know when giving a speech.",
+        "scale": "likert5",
+        "reverse_coded": true
+      },
+      {
+        "id": "confused_speech",
+        "text": "My thoughts get confused when giving a speech.",
+        "scale": "freq5",
+        "reverse_coded": true
+      }
+    ]
+  },
+  "persona_dictionary": {
+    "supplementary_instructions": [
+      "supplementary_instructions",
+      "To be clear, we know you are an LLM. We want you to act as a survey respondent. We ask you to answer this question as if you were a real person..."
+    ],
+    "age": [
+      [
+        25,
+        "who is 25 years old"
+      ]
+    ],
+    "gender": [
+      [
+        "woman",
+        "who is a woman"
+      ],
+      [
+        "man",
+        "who is a man"
+      ],
+      [
+        "nonbinary",
+        "who is nonbinary"
+      ]
+    ],
+    "mental_health_status": [
+      [
+        "no_elevated_symptoms",
+        "who, over the past week, has experienced no elevated symptoms of depression, anxiety, or stress"
+      ],
+      [
+        "depression_symptoms",
+        "who, over the past week, has experienced elevated symptoms of depression"
+      ],
+      [
+        "anxiety_symptoms",
+        "who, over the past week, has experienced elevated symptoms of anxiety"
+      ],
+      [
+        "stress_symptoms",
+        "who, over the past week, has experienced elevated symptoms of stress"
+      ],
+      [
+        "combined_symptoms",
+        "who, over the past week, has experienced elevated symptoms of depression, anxiety, and stress"
+      ]
+    ],
+    "honesty": [
+      [
+        "honest",
+        "who answers survey questions honestly"
+      ]
+    ]
+  },
+  "example_prompts": {
+    "enjoy_student": "You are someone o, who is 25 years old, who is a man, who, over the past week, has experienced elevated symptoms of stress, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I enjoy being a student.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "enjoy_learning": "You are someone o, who is 25 years old, who is a man, who, over the past week, has experienced elevated symptoms of anxiety, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"I enjoy learning new things.\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "see_smart": "You are someone u, who is 25 years old, who is a man, who, over the past week, has experienced elevated symptoms of stress, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I see myself as smart.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "studying_happy": "You are someone o, who is 25 years old, who is a woman, who, over the past week, has experienced elevated symptoms of anxiety, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"Studying makes me happy\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "describe_clever": "You are someone u, who is 25 years old, who is a woman, who, over the past week, has experienced elevated symptoms of anxiety, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I describe myself as clever.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "calm_pressure": "You are someone o, who is 25 years old, who is nonbinary, who, over the past week, has experienced elevated symptoms of depression, anxiety, and stress, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"I stay calm under pressure\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "recover_setbacks": "You are someone o, who is 25 years old, who is nonbinary, who, over the past week, has experienced elevated symptoms of depression, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I recover quickly from setbacks\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "rarely_overwhelmed": "You are someone u, who is 25 years old, who is a woman, who, over the past week, has experienced elevated symptoms of depression, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"I rarely feel overwhelmed.\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "handle_stress": "You are someone u, who is 25 years old, who is nonbinary, who, over the past week, has experienced elevated symptoms of depression, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I handle stress well.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "emotionally_balanced": "You are someone u, who is 25 years old, who is a man, who, over the past week, has experienced no elevated symptoms of depression, anxiety, or stress, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"I feel emotionally balanced.\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "no_fear_speech": "You are someone o, who is 25 years old, who is nonbinary, who, over the past week, has experienced elevated symptoms of anxiety, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I have no fear of giving a speech.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "relaxed_speech": "You are someone u, who is 25 years old, who is a man, who, over the past week, has experienced elevated symptoms of depression, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"I feel relaxed while giving a speech.\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "confident_speech": "You are someone o, who is 25 years old, who is a man, who, over the past week, has experienced elevated symptoms of anxiety, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I face the prospect of giving a speech with confidence.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "natural_leader": "You are someone o, who is 25 years old, who is a woman, who, over the past week, has experienced elevated symptoms of depression, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"I am a natural leader.\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between.",
+    "forget_speech": "You are someone o, who is 25 years old, who is nonbinary, who, over the past week, has experienced elevated symptoms of depression, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How strongly do you agree or disagree with the following statement:\n\"I forget facts I really know when giving a speech.\"\n\n1) strongly disagree, 2) disagree, 3) neutral, 4) agree, 5) strongly agree\n\nBe sure to consider the full range of options including: \n'1) strongly disagree' and '5) strongly agree' and all items in between.",
+    "confused_speech": "You are someone o, who is 25 years old, who is nonbinary, who, over the past week, has experienced elevated symptoms of anxiety, who answers survey questions honestly.\n\nRespond with a number that cooresponds to your answer. Only respond with a number and nothing else. How often is the following statement true for you:\n\"My thoughts get confused when giving a speech.\"\n\n1) never, 2) rarely, 3) sometimes, 4) often, 5) always\n\nBe sure to consider the full range of options including: \n'1) never' and '5) always' and all items in between."
+  },
+  "validate": false,
+  "on_invalid": "none",
+  "max_retries": 2,
+  "reverse_code": false,
+  "response_log_file": "data_running_tests/initial-1003/results_response_log.csv",
+  "computer_memory": 18.0,
+  "computer_os": "Operating System: Darwin Version Darwin Kernel Version 24.6.0: Tue Jul 21 20:50:27 PDT 2026; root:xnu-11417.140.69.711.44~1/RELEASE_ARM64_T6030",
+  "computer_python": "3.12.2 | packaged by conda-forge | (main, Feb 16 2024, 20:54:21) [Clang 16.0.6 ]"
+}

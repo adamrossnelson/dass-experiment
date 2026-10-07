@@ -1,0 +1,38 @@
+---
+title: "An exploration of prompts given these personas and questions"
+---
+
+```{python}
+from SurveyResponder import SurveyResponder
+
+import pandas as pd
+import numpy as np
+
+from IPython.display import display, Markdown
+
+# While building and testing we'll use just 2 responses
+num_responses = 2
+
+responder = SurveyResponder(
+    questions_path="dass21questions.json",
+    persona_path="persona_dass21_final.json",
+    model_name="olmo2:7b",
+    num_responses=num_responses,
+    temperature=0.8,
+    base_url="http://localhost:11434/api/generate"
+)
+
+for i in range(4):
+    display(Markdown(f"***\n\n## Persona Example\n\n***"))
+    display(Markdown(responder.example_persona()))
+    display(Markdown("***"))
+
+```
+
+# Prompts... ...
+
+```{python}
+for i in range(4):
+    display(Markdown(f"***\n\n## Prompt Examples\n\n***"))
+    display(Markdown(responder.example_prompt()))
+    display(Markdown("***"))

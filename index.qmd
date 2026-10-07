@@ -1,0 +1,18 @@
+---
+title: "Building And Running An Experiment Using DASS"
+---
+
+**RQ:** Does prompting an LLM with persona characteristics related to mental
+health influence LLM survey response behaviors as measured by DASS-21?
+
+## Experiment steps
+
+1. [Make Data](make_data.qmd) — generate simulated DASS-21 survey responses
+   by prompting an LLM with randomly assigned personas.
+2. [Explore Data](explore_data.qmd) — explore and visualize the resulting
+   response data.
+
+## Supporting pages
+
+- [Explore Prompts](explore_prompts.qmd) — inspect example prompts generated
+  from the personas and DASS-21 questions.

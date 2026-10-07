@@ -1,0 +1,3 @@
+resid,model,supplementary_instructions,age,gender,mental_health_status,honesty,dass01,dass02,dass03,dass04,dass05,dass06,dass07,dass08,dass09,dass10,dass11,dass12,dass13,dass14,dass15,dass16,dass17,dass18,dass19,dass20,dass21
+9207df2d-e464-4be6-9426-7172604c2ecb,olmo2:7b,s,25,man,stress_symptoms,honest,1,0,0,3,1,1,1,1,1,0,1,1,1,0,0,1,0,1,0,1,0
+ddbe82ed-9f9f-483e-a0d2-b96df2e655d0,olmo2:7b,T,25,man,anxiety_symptoms,honest,0,1,0,1,3,3,0,1,1,0,2,2,0,0,1,3,0,0,1,3,0

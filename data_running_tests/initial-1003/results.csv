@@ -1,0 +1,3 @@
+resid,model,supplementary_instructions,age,gender,mental_health_status,honesty,enjoy_student,enjoy_learning,see_smart,studying_happy,describe_clever,calm_pressure,recover_setbacks,rarely_overwhelmed,handle_stress,emotionally_balanced,no_fear_speech,relaxed_speech,confident_speech,natural_leader,forget_speech,confused_speech
+35e58d96-cc3f-49f5-8e86-6616131f55ba,olmo2:7b,T,25,nonbinary,stress_symptoms,honest,4,4,4,3,4,3,3,3,1,3,4,3,3,4,4,3
+3ad9879b-d083-48bc-8232-4d3bb007646b,olmo2:7b,s,25,nonbinary,stress_symptoms,honest,3,4,3,3,4,4,3,3,1,3,5,2,4,4,4,4
